@@ -46,12 +46,12 @@ def decision_1(action=None, success=None, container=None, results=None, handle=N
 
     # call connected blocks if condition 1 matched
     if matched:
-        format_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        cf_local_Capitalize_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        cf_local_Capitalize_2(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
         return
 
     # call connected blocks for 'else' condition 2
-    cf_local_Capitalize_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
-    cf_local_Capitalize_2(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+    format_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
 
     return
 
