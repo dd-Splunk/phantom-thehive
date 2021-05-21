@@ -105,12 +105,12 @@ Your Security team"""
 
     return
 
-def create_ticket_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('create_ticket_3() called')
+def Send_to_theHive(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Send_to_theHive() called')
         
     #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
     
-    # collect data for 'create_ticket_3' call
+    # collect data for 'Send_to_theHive' call
     results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)
     custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)
     custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)
@@ -118,7 +118,7 @@ def create_ticket_3(action=None, success=None, container=None, results=None, han
 
     parameters = []
     
-    # build parameters list for 'create_ticket_3' call
+    # build parameters list for 'Send_to_theHive' call
     for results_item_1 in results_data_1:
         for custom_function_results_item_1 in custom_function_results_data_1:
             for custom_function_results_item_2 in custom_function_results_data_2:
@@ -134,7 +134,7 @@ def create_ticket_3(action=None, success=None, container=None, results=None, han
                         'context': {'artifact_id': results_item_1[1]},
                     })
 
-    phantom.act(action="create ticket", parameters=parameters, assets=['thehive-dd'], name="create_ticket_3")
+    phantom.act(action="create ticket", parameters=parameters, assets=['thehive-dd'], name="Send_to_theHive")
 
     return
 
@@ -150,7 +150,7 @@ def format_2(action=None, success=None, container=None, results=None, handle=Non
 
     phantom.format(container=container, template=template, parameters=parameters, name="format_2")
 
-    create_ticket_3(container=container)
+    Send_to_theHive(container=container)
 
     return
 

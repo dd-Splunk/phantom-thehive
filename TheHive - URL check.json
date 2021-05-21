@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "07e647d8eb32e2d28f3ae187f515fae8e634cb32",
+            "hash": "d49e2c7dcae5ac9c27ac57007a0525428a57903f",
             "joint": {
                 "cells": [
                     {
@@ -55,7 +55,7 @@
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "send email, create ticket",
+                        "connection_name": "send email, Send to theHive",
                         "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
@@ -134,7 +134,7 @@
                         },
                         "position": {
                             "x": 1460,
-                            "y": 220
+                            "y": 540
                         },
                         "previous_function": "",
                         "previous_name": "",
@@ -512,7 +512,7 @@
                         },
                         "position": {
                             "x": 120,
-                            "y": 220
+                            "y": 520
                         },
                         "previous_function": "",
                         "previous_name": "",
@@ -604,178 +604,6 @@
                         },
                         "type": "link",
                         "z": 76
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "format 1"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"The URL: {0} is considered malicious.\n\nYour e-mail is blocked.\n\nYour Security team\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.requestURL\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    send_email_2(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "url reputation",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "dbee08cc-fca2-4241-89d8-cd24fd2aaac2",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 108,
-                        "line_start": 88,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 1,
-                        "order": 5,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "artifact:*.cef.requestURL"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 640,
-                            "y": 700
-                        },
-                        "previous_function": "",
-                        "previous_name": "format_1",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "The URL: {0} is considered malicious.\n\nYour e-mail is blocked.\n\nYour Security team",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 82
                     },
                     {
                         "action": "send email",
@@ -1194,8 +1022,8 @@
                             }
                         },
                         "position": {
-                            "x": 980,
-                            "y": 700
+                            "x": 940,
+                            "y": 640
                         },
                         "previous_function": "",
                         "previous_name": "send_email_2",
@@ -1215,548 +1043,6 @@
                         "type": "coa.Action",
                         "warn": false,
                         "z": 86
-                    },
-                    {
-                        "action": "create ticket",
-                        "action_type": "generic",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {
-                            "description": "url_reputation_1:action_result.message",
-                            "fields": "",
-                            "owner": "",
-                            "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
-                            "title": "format_2:formatted_data",
-                            "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
-                        },
-                        "angle": 0,
-                        "app": "TheHive",
-                        "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
-                        "approver": "",
-                        "assets": [
-                            {
-                                "action": "create ticket",
-                                "actions": [
-                                    "get observables",
-                                    "create observable",
-                                    "update task",
-                                    "search task",
-                                    "search ticket",
-                                    "create task",
-                                    "list tickets",
-                                    "update ticket",
-                                    "get ticket",
-                                    "create ticket",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "TheHive",
-                                "app_version": "2.0.4",
-                                "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
-                                "asset_name": "thehive-dd",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "description": "url_reputation_1:action_result.message",
-                                    "fields": "",
-                                    "owner": "",
-                                    "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
-                                    "title": "format_2:formatted_data",
-                                    "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
-                                },
-                                "has_app": true,
-                                "id": 14,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "thehive-dd",
-                                "output": [
-                                    {
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Description",
-                                        "column_order": 1,
-                                        "data_path": "action_result.parameter.description",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testTicket",
-                                            "Today is a beautiful day!",
-                                            "Testing"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Fields",
-                                        "column_order": 2,
-                                        "data_path": "action_result.parameter.fields",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "{\"field_name_1\": \"field_value_1\", \"field_name_2\": \"field_value_2\"}"
-                                        ]
-                                    },
-                                    {
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_path": "action_result.parameter.owner",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "herman.edwards"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.severity",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "3"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Title",
-                                        "column_order": 0,
-                                        "data_path": "action_result.parameter.title",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Test",
-                                            "QA"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.tlp",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "White",
-                                            "Green"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._id",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._parent",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._routing",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._type",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "case"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._version",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "CaseID",
-                                        "column_order": 6,
-                                        "contains": [
-                                            "thehive case id"
-                                        ],
-                                        "data_path": "action_result.data.*.caseId",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            22,
-                                            125
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.createdAt",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1519079897718,
-                                            1529529092329
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.createdBy",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testUser"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.description",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testTicket",
-                                            "Today is a beautiful day!"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.flag",
-                                        "data_type": "boolean",
-                                        "example_values": [
-                                            true,
-                                            false
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.id",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWGwN71W38eA2eAzW_ec",
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Owner",
-                                        "column_order": 5,
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_path": "action_result.data.*.owner",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "herman.edwards"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Severity",
-                                        "column_order": 4,
-                                        "data_path": "action_result.data.*.severity",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            3
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.startDate",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1519079898453,
-                                            1529529092817
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Open"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.title",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Test",
-                                            "QA"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "TLP",
-                                        "column_order": 3,
-                                        "data_path": "action_result.data.*.tlp",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            2
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.important_data",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "value"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.new_case_id",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            125
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Important data: value",
-                                            "Successfully created a new case",
-                                            "Invalid severity entered. Must be an integer between 0 and 3 (inclusive).. Error string: 'invalid literal for int() with base 10: 'invalid severity''"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1,
-                                            0
-                                        ]
-                                    }
-                                ],
-                                "parameters": {
-                                    "description": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Description of the ticket",
-                                        "key": "description",
-                                        "order": 1,
-                                        "required": true
-                                    },
-                                    "fields": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "JSON containing field values",
-                                        "key": "fields",
-                                        "order": 5,
-                                        "required": false
-                                    },
-                                    "owner": {
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "User to whom the case has been assigned (Default is the user who created the case)",
-                                        "key": "owner",
-                                        "order": 4,
-                                        "primary": true,
-                                        "required": false
-                                    },
-                                    "severity": {
-                                        "data_type": "string",
-                                        "default": "Medium",
-                                        "description": "Severity of the case (Default is Medium)",
-                                        "key": "severity",
-                                        "order": 2,
-                                        "required": false,
-                                        "value_list": [
-                                            "Low",
-                                            "Medium",
-                                            "High"
-                                        ]
-                                    },
-                                    "title": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Title",
-                                        "key": "title",
-                                        "order": 0,
-                                        "required": true
-                                    },
-                                    "tlp": {
-                                        "data_type": "string",
-                                        "default": "Amber",
-                                        "description": "TLP (Default is Amber)",
-                                        "key": "tlp",
-                                        "order": 3,
-                                        "required": false,
-                                        "value_list": [
-                                            "White",
-                                            "Green",
-                                            "Amber",
-                                            "Red"
-                                        ]
-                                    }
-                                },
-                                "product_name": "TheHive",
-                                "product_vendor": "TheHive Project",
-                                "targets": "14",
-                                "type": "ticketing"
-                            }
-                        ],
-                        "attrs": {
-                            ".action": {
-                                "text": "create ticket"
-                            },
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "Generic"
-                            },
-                            "g.approver image": {
-                                "opacity": 1
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            },
-                            "g.timer image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def create_ticket_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('create_ticket_3() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'create_ticket_3' call\n    results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)\n    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)\n    formatted_data_1 = phantom.get_format_data(name='format_2')\n\n    parameters = []\n    \n    # build parameters list for 'create_ticket_3' call\n    for results_item_1 in results_data_1:\n        for custom_function_results_item_1 in custom_function_results_data_1:\n            for custom_function_results_item_2 in custom_function_results_data_2:\n                if results_item_1[0]:\n                    parameters.append({\n                        'tlp': custom_function_results_item_1[0],\n                        'owner': \"\",\n                        'title': formatted_data_1,\n                        'fields': \"\",\n                        'severity': custom_function_results_item_2[0],\n                        'description': results_item_1[0],\n                        # context (artifact id) is added to associate results with the artifact\n                        'context': {'artifact_id': results_item_1[1]},\n                    })\n\n    phantom.act(action=\"create ticket\", parameters=parameters, assets=['thehive-dd'], name=\"create_ticket_3\")\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "Capitalize 1, Capitalize 2",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "66483e4f-988c-4b52-8b3f-1ecc0e37613d",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 141,
-                        "line_start": 108,
-                        "message": "Configuring now",
-                        "name": "create ticket",
-                        "notes": "",
-                        "number": 3,
-                        "order": 6,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 1200,
-                            "y": 440
-                        },
-                        "previous_function": "",
-                        "previous_name": "create_ticket_3",
-                        "required_params": {
-                            "description": true,
-                            "title": true
-                        },
-                        "reviewer": "",
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "app_action_assets",
-                        "status": "",
-                        "title": "Generic",
-                        "type": "coa.Action",
-                        "warn": false,
-                        "z": 93
                     },
                     {
                         ".scmName/text": "local",
@@ -2611,7 +1897,7 @@
                         },
                         "position": {
                             "x": 260,
-                            "y": 200
+                            "y": 500
                         },
                         "previous_function": "",
                         "previous_name": "url_reputation_1",
@@ -2630,178 +1916,6 @@
                         "type": "coa.Action",
                         "warn": false,
                         "z": 98
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".format": {
-                                "text": "format 2"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out-1": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out-1>.port-body": {
-                                "port": {
-                                    "id": "out-1",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "format"
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_2() called')\n    \n    template = \"\"\"Suspiciuous URL: {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.requestURL\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_2\")\n\n    create_ticket_3(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "Capitalize 1, Capitalize 2",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "description": "",
-                        "format": "format",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "d0f3fc38-5195-4a1d-9525-ea289ce48590",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "def join_format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_format_2() called')\n\n    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed\n    if phantom.completed(custom_function_names=['cf_local_Capitalize_1', 'cf_local_Capitalize_2']):\n        \n        # call connected block \"format_2\"\n        format_2(container=container, handle=handle)\n    \n    return",
-                        "join_optional": [],
-                        "join_start": 157,
-                        "line_end": 168,
-                        "line_start": 141,
-                        "message": "Configuring now",
-                        "name": "format",
-                        "notes": "",
-                        "number": 2,
-                        "order": 7,
-                        "outPorts": [
-                            "out-1"
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "artifact:*.cef.requestURL"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 940,
-                            "y": 440
-                        },
-                        "previous_function": "",
-                        "previous_name": "format_2",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "format",
-                        "status": "",
-                        "template": "Suspiciuous URL: {0}",
-                        "title": "format",
-                        "type": "coa.Format",
-                        "warn": false,
-                        "z": 99
                     },
                     {
                         "active": false,
@@ -2977,8 +2091,8 @@
                             }
                         },
                         "position": {
-                            "x": 500,
-                            "y": 200
+                            "x": 480,
+                            "y": 500
                         },
                         "previous_function": "",
                         "previous_name": "decision_1",
@@ -3112,6 +2226,892 @@
                         },
                         "type": "link",
                         "z": 103
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "format 1"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def format_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_1() called')\n    \n    template = \"\"\"The URL: {0} is considered malicious.\n\nYour e-mail is blocked.\n\nYour Security team\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.requestURL\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_1\")\n\n    send_email_2(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "url reputation",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "dbee08cc-fca2-4241-89d8-cd24fd2aaac2",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 108,
+                        "line_start": 88,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 1,
+                        "order": 5,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "artifact:*.cef.requestURL"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 660,
+                            "y": 640
+                        },
+                        "previous_function": "",
+                        "previous_name": "format_1",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "The URL: {0} is considered malicious.\n\nYour e-mail is blocked.\n\nYour Security team",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 104
+                    },
+                    {
+                        "action": "create ticket",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "description": "url_reputation_1:action_result.message",
+                            "fields": "",
+                            "owner": "",
+                            "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
+                            "title": "format_2:formatted_data",
+                            "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
+                        },
+                        "angle": 0,
+                        "app": "TheHive",
+                        "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "create ticket",
+                                "actions": [
+                                    "get observables",
+                                    "create observable",
+                                    "update task",
+                                    "search task",
+                                    "search ticket",
+                                    "create task",
+                                    "list tickets",
+                                    "update ticket",
+                                    "get ticket",
+                                    "create ticket",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "TheHive",
+                                "app_version": "2.0.4",
+                                "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
+                                "asset_name": "thehive-dd",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "description": "url_reputation_1:action_result.message",
+                                    "fields": "",
+                                    "owner": "",
+                                    "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
+                                    "title": "format_2:formatted_data",
+                                    "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
+                                },
+                                "has_app": true,
+                                "id": 14,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "thehive-dd",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Description",
+                                        "column_order": 1,
+                                        "data_path": "action_result.parameter.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket",
+                                            "Today is a beautiful day!",
+                                            "Testing"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Fields",
+                                        "column_order": 2,
+                                        "data_path": "action_result.parameter.fields",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "{\"field_name_1\": \"field_value_1\", \"field_name_2\": \"field_value_2\"}"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.parameter.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "herman.edwards"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.severity",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Title",
+                                        "column_order": 0,
+                                        "data_path": "action_result.parameter.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test",
+                                            "QA"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.tlp",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "White",
+                                            "Green"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._parent",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._routing",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "case"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._version",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "CaseID",
+                                        "column_order": 6,
+                                        "contains": [
+                                            "thehive case id"
+                                        ],
+                                        "data_path": "action_result.data.*.caseId",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            22,
+                                            125
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdAt",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079897718,
+                                            1529529092329
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdBy",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testUser"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket",
+                                            "Today is a beautiful day!"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.flag",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWGwN71W38eA2eAzW_ec",
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Owner",
+                                        "column_order": 5,
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.data.*.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "herman.edwards"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Severity",
+                                        "column_order": 4,
+                                        "data_path": "action_result.data.*.severity",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            3
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.startDate",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079898453,
+                                            1529529092817
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Open"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test",
+                                            "QA"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "TLP",
+                                        "column_order": 3,
+                                        "data_path": "action_result.data.*.tlp",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.important_data",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "value"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.new_case_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            125
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Important data: value",
+                                            "Successfully created a new case",
+                                            "Invalid severity entered. Must be an integer between 0 and 3 (inclusive).. Error string: 'invalid literal for int() with base 10: 'invalid severity''"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "description": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Description of the ticket",
+                                        "key": "description",
+                                        "order": 1,
+                                        "required": true
+                                    },
+                                    "fields": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "JSON containing field values",
+                                        "key": "fields",
+                                        "order": 5,
+                                        "required": false
+                                    },
+                                    "owner": {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "User to whom the case has been assigned (Default is the user who created the case)",
+                                        "key": "owner",
+                                        "order": 4,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "severity": {
+                                        "data_type": "string",
+                                        "default": "Medium",
+                                        "description": "Severity of the case (Default is Medium)",
+                                        "key": "severity",
+                                        "order": 2,
+                                        "required": false,
+                                        "value_list": [
+                                            "Low",
+                                            "Medium",
+                                            "High"
+                                        ]
+                                    },
+                                    "title": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Title",
+                                        "key": "title",
+                                        "order": 0,
+                                        "required": true
+                                    },
+                                    "tlp": {
+                                        "data_type": "string",
+                                        "default": "Amber",
+                                        "description": "TLP (Default is Amber)",
+                                        "key": "tlp",
+                                        "order": 3,
+                                        "required": false,
+                                        "value_list": [
+                                            "White",
+                                            "Green",
+                                            "Amber",
+                                            "Red"
+                                        ]
+                                    }
+                                },
+                                "product_name": "TheHive",
+                                "product_vendor": "TheHive Project",
+                                "targets": "14",
+                                "type": "ticketing"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "Send to theHive"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def Send_to_theHive(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Send_to_theHive() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'Send_to_theHive' call\n    results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)\n    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)\n    formatted_data_1 = phantom.get_format_data(name='format_2')\n\n    parameters = []\n    \n    # build parameters list for 'Send_to_theHive' call\n    for results_item_1 in results_data_1:\n        for custom_function_results_item_1 in custom_function_results_data_1:\n            for custom_function_results_item_2 in custom_function_results_data_2:\n                if results_item_1[0]:\n                    parameters.append({\n                        'tlp': custom_function_results_item_1[0],\n                        'owner': \"\",\n                        'title': formatted_data_1,\n                        'fields': \"\",\n                        'severity': custom_function_results_item_2[0],\n                        'description': results_item_1[0],\n                        # context (artifact id) is added to associate results with the artifact\n                        'context': {'artifact_id': results_item_1[1]},\n                    })\n\n    phantom.act(action=\"create ticket\", parameters=parameters, assets=['thehive-dd'], name=\"Send_to_theHive\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "Capitalize 1, Capitalize 2",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Send to theHive",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "66483e4f-988c-4b52-8b3f-1ecc0e37613d",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 141,
+                        "line_start": 108,
+                        "message": "Configuring now",
+                        "name": "create ticket",
+                        "notes": "",
+                        "number": 3,
+                        "order": 6,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1200,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "Send_to_theHive",
+                        "required_params": {
+                            "description": true,
+                            "title": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": false,
+                        "z": 105
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "format 2"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_2() called')\n    \n    template = \"\"\"Suspiciuous URL: {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"artifact:*.cef.requestURL\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"format_2\")\n\n    Send_to_theHive(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "Capitalize 1, Capitalize 2",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "d0f3fc38-5195-4a1d-9525-ea289ce48590",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "def join_format_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_format_2() called')\n\n    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed\n    if phantom.completed(custom_function_names=['cf_local_Capitalize_1', 'cf_local_Capitalize_2']):\n        \n        # call connected block \"format_2\"\n        format_2(container=container, handle=handle)\n    \n    return",
+                        "join_optional": [],
+                        "join_start": 157,
+                        "line_end": 168,
+                        "line_start": 141,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "",
+                        "number": 2,
+                        "order": 7,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "artifact:*.cef.requestURL"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 940,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "format_2",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "Suspiciuous URL: {0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 106
                     }
                 ]
             },
@@ -3121,7 +3121,7 @@
         "schema": 4,
         "version": "4.10.1.45070"
     },
-    "create_time": "2021-04-01T07:54:57.577135+00:00",
+    "create_time": "2021-05-21T10:05:57.291824+00:00",
     "draft_mode": false,
     "labels": [
         "*"
