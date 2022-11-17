@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "99daa1242c9ff7842e2dc049e635e909337250eb",
             "joint": {
                 "cells": [
                     {
@@ -1283,237 +1282,6 @@
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
                         "z": 96
-                    },
-                    {
-                        ".scmName/text": "local",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {},
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#E6984E"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".customFunction": {
-                                "text": "Capitalize 1"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".scmName": {
-                                "text": "local"
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            ".title-info": {
-                                "text": ""
-                            },
-                            "g.branch image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            }
-                        },
-                        "block_code": "def cf_local_Capitalize_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_local_Capitalize_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"sensitivity\"),\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in container_property_0:\n        parameters.append({\n            'input_string': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"local/Capitalize\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='local/Capitalize', parameters=parameters, name='cf_local_Capitalize_1', callback=join_format_2)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "cfDisplayPath": "local/Capitalize",
-                        "cfInputs": {
-                            "input_string": {
-                                "collectionType": "container_property",
-                                "dataPath": "container:sensitivity",
-                                "paramName": "item0[0]",
-                                "type": "item"
-                            }
-                        },
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "url reputation",
-                        "connection_type": "action",
-                        "currentVersion": true,
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 18,
-                        "customFunction": "local/Capitalize",
-                        "customFunctionId": null,
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "",
-                        "delay": 0,
-                        "description": "",
-                        "draftMode": false,
-                        "existingCF": false,
-                        "functionBlock": "custom function",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "89b05a5c-dd7d-4286-b352-67e9d59ee8c9",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "input_string-0": "container:sensitivity",
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 198,
-                        "line_start": 168,
-                        "message": "Configuring now",
-                        "name": "Capitalize",
-                        "notes": "",
-                        "number": 1,
-                        "order": 8,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 660,
-                            "y": 360
-                        },
-                        "previous_function": "",
-                        "previous_name": "cf_local_Capitalize_1",
-                        "selectedCustomFunction": {
-                            "description": "Capitalize first char",
-                            "draftMode": false,
-                            "id": 14,
-                            "inputs": [
-                                {
-                                    "_pretty_custom_function": "Capitalize",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 14,
-                                    "description": "",
-                                    "id": 47,
-                                    "input_type": "item",
-                                    "name": "input_string",
-                                    "placeholder": ""
-                                }
-                            ],
-                            "name": "Capitalize",
-                            "outputs": [
-                                {
-                                    "_pretty_custom_function": "Capitalize",
-                                    "contains_type": [
-                                        "*"
-                                    ],
-                                    "custom_function": 14,
-                                    "data_path": "capitalized",
-                                    "description": "",
-                                    "id": 32
-                                }
-                            ],
-                            "playbooks": {
-                                "draft_playbooks": [],
-                                "draft_version_id": null,
-                                "playbooks": []
-                            },
-                            "scmId": 2,
-                            "scmName": "local"
-                        },
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "repo",
-                        "status": "warn",
-                        "title": "custom function",
-                        "type": "coa.CustomFunctionBlock",
-                        "userGeneratedCode": "    # Write your custom code here...",
-                        "warn": false,
-                        "z": 97
                     },
                     {
                         "active": false,
@@ -3117,6 +2885,237 @@
                         "type": "coa.Action",
                         "warn": "",
                         "z": 107
+                    },
+                    {
+                        ".scmName/text": "local",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "Capitalize 1"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "local"
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def cf_local_Capitalize_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_local_Capitalize_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"sensitivity\"),\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in container_property_0:\n        parameters.append({\n            'input_string': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"local/Capitalize\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='local/Capitalize', parameters=parameters, name='cf_local_Capitalize_1', callback=join_format_2)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "local/Capitalize",
+                        "cfInputs": {
+                            "input_string": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:sensitivity",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "url reputation",
+                        "connection_type": "action",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 18,
+                        "customFunction": "local/Capitalize",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "draftMode": false,
+                        "existingCF": false,
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "89b05a5c-dd7d-4286-b352-67e9d59ee8c9",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "input_string-0": "container:sensitivity",
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 198,
+                        "line_start": 168,
+                        "message": "Configuring now",
+                        "name": "Capitalize",
+                        "notes": "",
+                        "number": 1,
+                        "order": 8,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 660,
+                            "y": 360
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_local_Capitalize_1",
+                        "selectedCustomFunction": {
+                            "description": "Capitalize first char",
+                            "draftMode": false,
+                            "id": 14,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "Capitalize",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 14,
+                                    "description": "",
+                                    "id": 47,
+                                    "input_type": "item",
+                                    "name": "input_string",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "name": "Capitalize",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "Capitalize",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 14,
+                                    "data_path": "capitalized",
+                                    "description": "",
+                                    "id": 32
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": []
+                            },
+                            "scmId": 2,
+                            "scmName": "local"
+                        },
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "warn",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 108
                     }
                 ]
             },
