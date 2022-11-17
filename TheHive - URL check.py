@@ -29,7 +29,7 @@ def url_reputation_1(action=None, success=None, container=None, results=None, ha
                 'context': {'artifact_id': container_item[1]},
             })
 
-    phantom.act(action="url reputation", parameters=parameters, assets=['virustotal-dd'], callback=decision_1, name="url_reputation_1")
+    phantom.act(action="url reputation", parameters=parameters, assets=['vt-splunk-dd'], callback=decision_1, name="url_reputation_1")
 
     return
 
@@ -99,7 +99,7 @@ Your Security team"""
         "artifact:*.cef.requestURL",
     ]
 
-    phantom.format(container=container, template=template, parameters=parameters, name="format_1")
+    phantom.format(container=container, template=template, parameters=parameters, name="format_1", separator=", ")
 
     send_email_2(container=container)
 
@@ -148,7 +148,7 @@ def format_2(action=None, success=None, container=None, results=None, handle=Non
         "artifact:*.cef.requestURL",
     ]
 
-    phantom.format(container=container, template=template, parameters=parameters, name="format_2")
+    phantom.format(container=container, template=template, parameters=parameters, name="format_2", separator=", ")
 
     Send_to_theHive(container=container)
 
