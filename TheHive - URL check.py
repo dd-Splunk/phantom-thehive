@@ -112,8 +112,8 @@ def Send_to_theHive(action=None, success=None, container=None, results=None, han
     
     # collect data for 'Send_to_theHive' call
     results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)
-    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)
-    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)
+    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)
+    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)
     formatted_data_1 = phantom.get_format_data(name='format_2')
 
     parameters = []
@@ -124,17 +124,17 @@ def Send_to_theHive(action=None, success=None, container=None, results=None, han
             for custom_function_results_item_2 in custom_function_results_data_2:
                 if results_item_1[0]:
                     parameters.append({
-                        'tlp': custom_function_results_item_1[0],
-                        'owner': "",
                         'title': formatted_data_1,
-                        'fields': "",
-                        'severity': custom_function_results_item_2[0],
                         'description': results_item_1[0],
+                        'severity': custom_function_results_item_1[0],
+                        'tlp': custom_function_results_item_2[0],
+                        'owner': "",
+                        'fields': "",
                         # context (artifact id) is added to associate results with the artifact
                         'context': {'artifact_id': results_item_1[1]},
                     })
 
-    phantom.act(action="create ticket", parameters=parameters, assets=['thehive-dd','dd-the-hive'], name="Send_to_theHive")
+    phantom.act(action="create ticket", parameters=parameters, assets=['dd-the-hive'], name="Send_to_theHive")
 
     return
 
