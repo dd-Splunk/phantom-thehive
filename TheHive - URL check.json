@@ -7,6 +7,7 @@
             "clean": true,
             "code_block": "",
             "description": "",
+            "hash": "3caaf8ca91cedaba30a5762411ced80d44332eb5",
             "joint": {
                 "cells": [
                     {
@@ -1767,548 +1768,6 @@
                         "z": 104
                     },
                     {
-                        "action": "create ticket",
-                        "action_type": "generic",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {
-                            "description": "url_reputation_1:action_result.message",
-                            "fields": "",
-                            "owner": "",
-                            "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
-                            "title": "format_2:formatted_data",
-                            "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
-                        },
-                        "angle": 0,
-                        "app": "TheHive",
-                        "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
-                        "approver": "",
-                        "assets": [
-                            {
-                                "action": "create ticket",
-                                "actions": [
-                                    "get observables",
-                                    "create observable",
-                                    "update task",
-                                    "search task",
-                                    "search ticket",
-                                    "create task",
-                                    "list tickets",
-                                    "update ticket",
-                                    "get ticket",
-                                    "create ticket",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "TheHive",
-                                "app_version": "2.0.4",
-                                "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
-                                "asset_name": "thehive-dd",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "description": "url_reputation_1:action_result.message",
-                                    "fields": "",
-                                    "owner": "",
-                                    "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
-                                    "title": "format_2:formatted_data",
-                                    "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
-                                },
-                                "has_app": true,
-                                "id": 14,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "thehive-dd",
-                                "output": [
-                                    {
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Description",
-                                        "column_order": 1,
-                                        "data_path": "action_result.parameter.description",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testTicket",
-                                            "Today is a beautiful day!",
-                                            "Testing"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Fields",
-                                        "column_order": 2,
-                                        "data_path": "action_result.parameter.fields",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "{\"field_name_1\": \"field_value_1\", \"field_name_2\": \"field_value_2\"}"
-                                        ]
-                                    },
-                                    {
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_path": "action_result.parameter.owner",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "herman.edwards"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.severity",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "3"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Title",
-                                        "column_order": 0,
-                                        "data_path": "action_result.parameter.title",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Test",
-                                            "QA"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.tlp",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "White",
-                                            "Green"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._id",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._parent",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._routing",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._type",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "case"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*._version",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "CaseID",
-                                        "column_order": 6,
-                                        "contains": [
-                                            "thehive case id"
-                                        ],
-                                        "data_path": "action_result.data.*.caseId",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            22,
-                                            125
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.createdAt",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1519079897718,
-                                            1529529092329
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.createdBy",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testUser"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.description",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "testTicket",
-                                            "Today is a beautiful day!"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.flag",
-                                        "data_type": "boolean",
-                                        "example_values": [
-                                            true,
-                                            false
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.id",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "AWGwN71W38eA2eAzW_ec",
-                                            "AWQfCcret-_WVPphkhQq"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Owner",
-                                        "column_order": 5,
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_path": "action_result.data.*.owner",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "herman.edwards"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Severity",
-                                        "column_order": 4,
-                                        "data_path": "action_result.data.*.severity",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            3
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.startDate",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1519079898453,
-                                            1529529092817
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Open"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data.*.title",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Test",
-                                            "QA"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "TLP",
-                                        "column_order": 3,
-                                        "data_path": "action_result.data.*.tlp",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            2
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.important_data",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "value"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.summary.new_case_id",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            125
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Important data: value",
-                                            "Successfully created a new case",
-                                            "Invalid severity entered. Must be an integer between 0 and 3 (inclusive).. Error string: 'invalid literal for int() with base 10: 'invalid severity''"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1,
-                                            0
-                                        ]
-                                    }
-                                ],
-                                "parameters": {
-                                    "description": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Description of the ticket",
-                                        "key": "description",
-                                        "order": 1,
-                                        "required": true
-                                    },
-                                    "fields": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "JSON containing field values",
-                                        "key": "fields",
-                                        "order": 5,
-                                        "required": false
-                                    },
-                                    "owner": {
-                                        "contains": [
-                                            "thehive username"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "User to whom the case has been assigned (Default is the user who created the case)",
-                                        "key": "owner",
-                                        "order": 4,
-                                        "primary": true,
-                                        "required": false
-                                    },
-                                    "severity": {
-                                        "data_type": "string",
-                                        "default": "Medium",
-                                        "description": "Severity of the case (Default is Medium)",
-                                        "key": "severity",
-                                        "order": 2,
-                                        "required": false,
-                                        "value_list": [
-                                            "Low",
-                                            "Medium",
-                                            "High"
-                                        ]
-                                    },
-                                    "title": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Title",
-                                        "key": "title",
-                                        "order": 0,
-                                        "required": true
-                                    },
-                                    "tlp": {
-                                        "data_type": "string",
-                                        "default": "Amber",
-                                        "description": "TLP (Default is Amber)",
-                                        "key": "tlp",
-                                        "order": 3,
-                                        "required": false,
-                                        "value_list": [
-                                            "White",
-                                            "Green",
-                                            "Amber",
-                                            "Red"
-                                        ]
-                                    }
-                                },
-                                "product_name": "TheHive",
-                                "product_vendor": "TheHive Project",
-                                "targets": "14",
-                                "type": "ticketing"
-                            }
-                        ],
-                        "attrs": {
-                            ".action": {
-                                "text": "Send to theHive"
-                            },
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#E6984E"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "Generic"
-                            },
-                            "g.approver image": {
-                                "opacity": 1
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1
-                            },
-                            "g.timer image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def Send_to_theHive(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Send_to_theHive() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'Send_to_theHive' call\n    results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)\n    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)\n    formatted_data_1 = phantom.get_format_data(name='format_2')\n\n    parameters = []\n    \n    # build parameters list for 'Send_to_theHive' call\n    for results_item_1 in results_data_1:\n        for custom_function_results_item_1 in custom_function_results_data_1:\n            for custom_function_results_item_2 in custom_function_results_data_2:\n                if results_item_1[0]:\n                    parameters.append({\n                        'tlp': custom_function_results_item_1[0],\n                        'owner': \"\",\n                        'title': formatted_data_1,\n                        'fields': \"\",\n                        'severity': custom_function_results_item_2[0],\n                        'description': results_item_1[0],\n                        # context (artifact id) is added to associate results with the artifact\n                        'context': {'artifact_id': results_item_1[1]},\n                    })\n\n    phantom.act(action=\"create ticket\", parameters=parameters, assets=['thehive-dd'], name=\"Send_to_theHive\")\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": true,
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "Capitalize 1, Capitalize 2",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "Send to theHive",
-                        "delay": 0,
-                        "description": "",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "66483e4f-988c-4b52-8b3f-1ecc0e37613d",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 141,
-                        "line_start": 108,
-                        "message": "Configuring now",
-                        "name": "create ticket",
-                        "notes": "",
-                        "number": 3,
-                        "order": 6,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 1200,
-                            "y": 440
-                        },
-                        "previous_function": "",
-                        "previous_name": "Send_to_theHive",
-                        "required_params": {
-                            "description": true,
-                            "title": true
-                        },
-                        "reviewer": "",
-                        "show_number": false,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "app_action_assets",
-                        "status": "warn",
-                        "title": "Generic",
-                        "type": "coa.Action",
-                        "warn": false,
-                        "z": 105
-                    },
-                    {
                         "active": false,
                         "angle": 0,
                         "attrs": {
@@ -2883,7 +2342,7 @@
                         "status": "",
                         "title": "Investigate",
                         "type": "coa.Action",
-                        "warn": "",
+                        "warn": false,
                         "z": 107
                     },
                     {
@@ -3116,6 +2575,930 @@
                         "userGeneratedCode": "    # Write your custom code here...",
                         "warn": false,
                         "z": 108
+                    },
+                    {
+                        "action": "create ticket",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "description": "url_reputation_1:action_result.message",
+                            "fields": "",
+                            "owner": "",
+                            "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
+                            "title": "format_2:formatted_data",
+                            "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
+                        },
+                        "angle": 0,
+                        "app": "TheHive",
+                        "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "create ticket",
+                                "actions": [
+                                    "get observables",
+                                    "create observable",
+                                    "update task",
+                                    "search task",
+                                    "search ticket",
+                                    "create task",
+                                    "list tickets",
+                                    "update ticket",
+                                    "get ticket",
+                                    "create ticket",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "TheHive",
+                                "app_version": "2.0.4",
+                                "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
+                                "asset_name": "thehive-dd",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "description": "url_reputation_1:action_result.message",
+                                    "fields": "",
+                                    "owner": "",
+                                    "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
+                                    "title": "format_2:formatted_data",
+                                    "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
+                                },
+                                "has_app": true,
+                                "id": 14,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "thehive-dd",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Description",
+                                        "column_order": 1,
+                                        "data_path": "action_result.parameter.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket",
+                                            "Today is a beautiful day!",
+                                            "Testing"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Fields",
+                                        "column_order": 2,
+                                        "data_path": "action_result.parameter.fields",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "{\"field_name_1\": \"field_value_1\", \"field_name_2\": \"field_value_2\"}"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.parameter.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "herman.edwards"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.severity",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Title",
+                                        "column_order": 0,
+                                        "data_path": "action_result.parameter.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test",
+                                            "QA"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.tlp",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "White",
+                                            "Green"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._parent",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._routing",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "case"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._version",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "CaseID",
+                                        "column_order": 6,
+                                        "contains": [
+                                            "thehive case id"
+                                        ],
+                                        "data_path": "action_result.data.*.caseId",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            22,
+                                            125
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdAt",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079897718,
+                                            1529529092329
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdBy",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testUser"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket",
+                                            "Today is a beautiful day!"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.flag",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWGwN71W38eA2eAzW_ec",
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Owner",
+                                        "column_order": 5,
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.data.*.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "herman.edwards"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Severity",
+                                        "column_order": 4,
+                                        "data_path": "action_result.data.*.severity",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            3
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.startDate",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079898453,
+                                            1529529092817
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Open"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test",
+                                            "QA"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "TLP",
+                                        "column_order": 3,
+                                        "data_path": "action_result.data.*.tlp",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.important_data",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "value"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.new_case_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            125
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Important data: value",
+                                            "Successfully created a new case",
+                                            "Invalid severity entered. Must be an integer between 0 and 3 (inclusive).. Error string: 'invalid literal for int() with base 10: 'invalid severity''"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "description": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Description of the ticket",
+                                        "key": "description",
+                                        "order": 1,
+                                        "required": true
+                                    },
+                                    "fields": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "JSON containing field values",
+                                        "key": "fields",
+                                        "order": 5,
+                                        "required": false
+                                    },
+                                    "owner": {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "User to whom the case has been assigned (Default is the user who created the case)",
+                                        "key": "owner",
+                                        "order": 4,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "severity": {
+                                        "data_type": "string",
+                                        "default": "Medium",
+                                        "description": "Severity of the case (Default is Medium)",
+                                        "key": "severity",
+                                        "order": 2,
+                                        "required": false,
+                                        "value_list": [
+                                            "Low",
+                                            "Medium",
+                                            "High"
+                                        ]
+                                    },
+                                    "title": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Title",
+                                        "key": "title",
+                                        "order": 0,
+                                        "required": true
+                                    },
+                                    "tlp": {
+                                        "data_type": "string",
+                                        "default": "Amber",
+                                        "description": "TLP (Default is Amber)",
+                                        "key": "tlp",
+                                        "order": 3,
+                                        "required": false,
+                                        "value_list": [
+                                            "White",
+                                            "Green",
+                                            "Amber",
+                                            "Red"
+                                        ]
+                                    }
+                                },
+                                "product_name": "TheHive",
+                                "product_vendor": "TheHive Project",
+                                "targets": "14",
+                                "type": "ticketing"
+                            },
+                            {
+                                "action": "create ticket",
+                                "actions": [
+                                    "add ttp",
+                                    "get alert",
+                                    "create alert",
+                                    "create task log",
+                                    "get observables",
+                                    "create observable",
+                                    "update task",
+                                    "search task",
+                                    "search ticket",
+                                    "create task",
+                                    "list alerts",
+                                    "list tickets",
+                                    "update ticket",
+                                    "get ticket",
+                                    "create ticket",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "TheHive",
+                                "app_version": "2.2.0",
+                                "appid": "08172714-ff65-40cb-aac3-a0f6ede8cb67",
+                                "asset_name": "dd-the-hive",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "description": "url_reputation_1:action_result.message",
+                                    "fields": "",
+                                    "owner": "",
+                                    "severity": "cf_local_Capitalize_2:custom_function_result.data.capitalized",
+                                    "title": "format_2:formatted_data",
+                                    "tlp": "cf_local_Capitalize_1:custom_function_result.data.capitalized"
+                                },
+                                "has_app": true,
+                                "id": 8,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "dd-the-hive",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Description",
+                                        "column_order": 2,
+                                        "data_path": "action_result.parameter.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Fields",
+                                        "column_order": 3,
+                                        "data_path": "action_result.parameter.fields",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "{\"field_name_1\": \"field_value_1\", \"field_name_2\": \"field_value_2\"}"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.parameter.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test.user"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.severity",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Title",
+                                        "column_order": 1,
+                                        "data_path": "action_result.parameter.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.tlp",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "White"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Ticket ID",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "thehive ticket id"
+                                        ],
+                                        "data_path": "action_result.data.*._id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._parent",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._routing",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "case"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*._version",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Case ID",
+                                        "column_order": 7,
+                                        "contains": [
+                                            "thehive case id"
+                                        ],
+                                        "data_path": "action_result.data.*.caseId",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            22
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdAt",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079897718
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.createdBy",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testUser"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "testTicket"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.endDate",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1542187296341
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.flag",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "thehive ticket id"
+                                        ],
+                                        "data_path": "action_result.data.*.id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "AWQfCcret-_WVPphkhQq"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.impactStatus",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Owner",
+                                        "column_order": 6,
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_path": "action_result.data.*.owner",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test.user"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.pap",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.resolutionStatus",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Severity",
+                                        "column_order": 5,
+                                        "data_path": "action_result.data.*.severity",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            3
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.startDate",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1519079898453
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Open"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Test"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "TLP",
+                                        "column_order": 4,
+                                        "data_path": "action_result.data.*.tlp",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.updatedAt",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1542289085536
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.updatedBy",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.important_data",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "value"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.new_case_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            125
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Successfully created a new case"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "description": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Description of the ticket",
+                                        "key": "description",
+                                        "order": 1,
+                                        "required": true
+                                    },
+                                    "fields": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "JSON containing field values",
+                                        "key": "fields",
+                                        "order": 5,
+                                        "required": false
+                                    },
+                                    "owner": {
+                                        "contains": [
+                                            "thehive username"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "User to whom the case has been assigned (default is the user who created the case)",
+                                        "key": "owner",
+                                        "order": 4,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "severity": {
+                                        "data_type": "string",
+                                        "default": "Medium",
+                                        "description": "Severity of the case (default is Medium)",
+                                        "key": "severity",
+                                        "order": 2,
+                                        "required": false,
+                                        "value_list": [
+                                            "Low",
+                                            "Medium",
+                                            "High"
+                                        ]
+                                    },
+                                    "title": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Title",
+                                        "key": "title",
+                                        "order": 0,
+                                        "required": true
+                                    },
+                                    "tlp": {
+                                        "data_type": "string",
+                                        "default": "Amber",
+                                        "description": "TLP (default is Amber)",
+                                        "key": "tlp",
+                                        "order": 3,
+                                        "required": false,
+                                        "value_list": [
+                                            "White",
+                                            "Green",
+                                            "Amber",
+                                            "Red"
+                                        ]
+                                    }
+                                },
+                                "product_name": "TheHive",
+                                "product_vendor": "TheHive Project",
+                                "targets": "8",
+                                "type": "ticketing"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "Send to theHive"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def Send_to_theHive(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Send_to_theHive() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'Send_to_theHive' call\n    results_data_1 = phantom.collect2(container=container, datapath=['url_reputation_1:action_result.message', 'url_reputation_1:action_result.parameter.context.artifact_id'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_1:custom_function_result.data.capitalized'], action_results=results)\n    custom_function_results_data_2 = phantom.collect2(container=container, datapath=['cf_local_Capitalize_2:custom_function_result.data.capitalized'], action_results=results)\n    formatted_data_1 = phantom.get_format_data(name='format_2')\n\n    parameters = []\n    \n    # build parameters list for 'Send_to_theHive' call\n    for results_item_1 in results_data_1:\n        for custom_function_results_item_1 in custom_function_results_data_1:\n            for custom_function_results_item_2 in custom_function_results_data_2:\n                if results_item_1[0]:\n                    parameters.append({\n                        'tlp': custom_function_results_item_1[0],\n                        'owner': \"\",\n                        'title': formatted_data_1,\n                        'fields': \"\",\n                        'severity': custom_function_results_item_2[0],\n                        'description': results_item_1[0],\n                        # context (artifact id) is added to associate results with the artifact\n                        'context': {'artifact_id': results_item_1[1]},\n                    })\n\n    phantom.act(action=\"create ticket\", parameters=parameters, assets=['thehive-dd','dd-the-hive'], name=\"Send_to_theHive\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "Capitalize 1, Capitalize 2",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Send to theHive",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "66483e4f-988c-4b52-8b3f-1ecc0e37613d",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 141,
+                        "line_start": 108,
+                        "message": "Configuring now",
+                        "name": "create ticket",
+                        "notes": "",
+                        "number": 3,
+                        "order": 6,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1200,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "Send_to_theHive",
+                        "required_params": {
+                            "description": true,
+                            "title": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "warn",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 109
                     }
                 ]
             },
@@ -3128,7 +3511,7 @@
         "schema": "4",
         "version": "5.4.0.101028"
     },
-    "create_time": "2022-11-17T15:45:19.237708+00:00",
+    "create_time": "2022-11-17T16:05:28.117984+00:00",
     "draft_mode": false,
     "labels": [
         "*"

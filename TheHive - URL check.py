@@ -134,7 +134,7 @@ def Send_to_theHive(action=None, success=None, container=None, results=None, han
                         'context': {'artifact_id': results_item_1[1]},
                     })
 
-    phantom.act(action="create ticket", parameters=parameters, assets=['thehive-dd'], name="Send_to_theHive")
+    phantom.act(action="create ticket", parameters=parameters, assets=['thehive-dd','dd-the-hive'], name="Send_to_theHive")
 
     return
 
